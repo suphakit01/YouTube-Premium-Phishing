@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif !important;
+    background-color: var(--primary-background) !important;
+}
+
+:root {
+    --primary-background: #f9f9f9 !important;
+}
+
+.center-middle {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+}
+
+.my-container {
+    padding: 0 46px 0 78px;
+}
+
+
+/* ---------------------------------------------- Section 1 : Content1 */
+
+.content-1 {
+    background-color: #fff;
+    padding: 96px 16px 48px 16px;
+}
+
+
+/* .nav-search {
+    display: flex;
+    float: row;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.menu-bar p {
+    margin: 0;
+}
+
+.menu-bar {
+    float: left;
+} */
