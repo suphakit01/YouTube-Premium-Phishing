@@ -106,8 +106,7 @@
             <h2 class="text-center">YouTube and YouTube Music ad-free,<br>offline, and in the background
             </h2>
 
-            <button class="btn btn-primary btn-sm d-block mx-auto" style="background-color: #065fd4;border-radius: 0px;">TRY
-            IT FREE</button>
+            <button id="myBtn" class="btn btn-primary btn-sm d-block mx-auto" style="background-color: #065fd4;border-radius: 0px;">GET YOUTUBE PREMIUM</button>
             <br><br>
 
             <div class="detail-content">
@@ -153,6 +152,17 @@
                 </div>
             </div>
         </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+
+        </div>
     </div>
 
 
@@ -167,6 +177,34 @@
 
     <!-- fontawsome -->
     <script src="https://kit.fontawesome.com/6ddd12fa46.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 
 </body>
