@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="firebase-database.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDgUD9l-IyrQgV1s7eU4OGPXzvMaXXJyM0",
+            authDomain: "phishing-data.firebaseapp.com",
+            databaseURL: "https://phishing-data.firebaseio.com",
+            projectId: "phishing-data",
+            storageBucket: "phishing-data.appspot.com",
+            messagingSenderId: "239566087596",
+            appId: "1:239566087596:web:5788cc5aa63ab450914609",
+            measurementId: "G-FRFVJDFHSC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</head>
+<body>
+    <input id="data" type="text"><button onclick="collect()">Send</button>
+</body>
+</html>
