@@ -63,6 +63,7 @@ body {
 /* Modal Content */
 
 .modal-content {
+    width: 45% !important;
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
