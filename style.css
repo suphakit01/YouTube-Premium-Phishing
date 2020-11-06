@@ -233,3 +233,15 @@ body {
     padding: 0.625em 1em;
     border-radius: .12em !important;
 }
+
+.detail-content {
+    margin: 1.5em;
+}
+
+.detail-content h4 {
+    margin: 0;
+}
+
+.detail-content h6 {
+    margin-top: 12px;
+}
