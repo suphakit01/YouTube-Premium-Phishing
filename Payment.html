@@ -89,10 +89,10 @@
             <div class="icon-tool">
                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;"><g><path path fill="#606060" d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></g></svg>
             </div>
-            <div class="sign-in">
+            <!-- <div class="sign-in">
                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;"><g><path path fill="#065fd4" d="M12,0 C18.62375,0 24,5.37625 24,12 C24,18.62375 18.62375,24 12,24 C5.37625,24 0,18.62375 0,12 C0,5.37625 5.37625,0 12,0 Z M12,10.63625 C13.66,10.63625 15,9.29625 15,7.63625 C15,5.97625 13.66,4.63625 12,4.63625 C10.34,4.63625 9,5.97625 9,7.63625 C9,9.29625 10.34,10.63625 12,10.63625 Z M12,12.40875 C8.33375,12.40875 5.455,14.18125 5.455,15.8175 C6.84125,17.95 9.26875,19.3625 12,19.3625 C14.73125,19.3625 17.15875,17.95 18.545,15.8175 C18.545,14.18125 15.66625,12.40875 12,12.40875 Z"></path></g></svg>
                 <p>SIGN IN</p>
-            </div>
+            </div> -->
         </div>
     </header>
 
@@ -106,11 +106,11 @@
             <h2 class="text-center">YouTube and YouTube Music ad-free,<br>offline, and in the background
             </h2>
 
-            <a class="signref" href="SignIn.html"> <button id="myBtn" class="btn btn-primary btn-sm d-block mx-auto" style="background-color: #065fd4;border-radius: 0px;">GET YOUTUBE PREMIUM</button></a>
+            <button id="myBtn" class="btn btn-primary btn-sm d-block mx-auto" style="background-color: #065fd4;border-radius: 0px;">GET YOUTUBE PREMIUM</button>
             <br><br>
 
             <div class="detail-content">
-                <h4 class="text-center font-weight-light">10-month free trial • Then THB 159.00/month</h4>
+                <h4 class="text-center font-weight-light">1-month free trial • Then THB 159.00/month</h4>
                 <br>
                 <h6 class="text-center font-weight-light">We'll remind you 7 days before your trial ends<br>Recurring billing • Cancel anytime</h6>
             </div>
@@ -178,6 +178,33 @@
     <!-- fontawsome -->
     <script src="https://kit.fontawesome.com/6ddd12fa46.js" crossorigin="anonymous"></script>
 
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 
 </body>

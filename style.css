@@ -69,7 +69,9 @@ body {
     border: 1px solid #888;
     width: 80%;
 }
-
+a.signref{
+    color: white;
+}
 
 /* The Close Button */
 
