@@ -14,8 +14,11 @@ body {
     --blue: #065fd4 !important;
 }
 
-.link1_detail {
-    width: 100%;
+.center-dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -39,10 +42,35 @@ body {
 
 .link1 {
     cursor: pointer;
+    margin-bottom: 0 !important;
+}
+
+.link1 p {
+    margin-bottom: 0 !important;
 }
 
 a:hover {
     text-decoration: none !important;
+}
+
+.link1_detail {
+    padding: 1em;
+    width: 45%;
+    display: none;
+    background-color: #d9d9d9;
+    margin: 0 0 0 0;
+}
+
+.link1_detail p {
+    margin: 0 0 0 0;
+    float: left;
+}
+
+
+/* -------------------------------------------- Button */
+
+.mybtn {
+    margin: 0 0 0 auto !important;
 }
 
 
