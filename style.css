@@ -62,6 +62,10 @@ body {
     border: 1px solid #888;
 }
 
+.myModal-content p {
+    margin: 0;
+}
+
 
 /* The Close Button */
 
