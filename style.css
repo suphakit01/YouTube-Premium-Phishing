@@ -77,6 +77,8 @@ a:hover {
 
 .myModal {
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     z-index: 1;
     padding-top: 5px;
@@ -93,25 +95,225 @@ a:hover {
 
 /* Modal Content */
 
-.myModal-content {
-    width: 45% !important;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
+.myModel-dialog {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.myModal-content p {
+.myModal-head {
+    width: 45% !important;
+    background-color: #444444;
+    color: #ffffff;
+    padding: 20px 24px 20px 24px;
+    margin: auto;
+    border: 1px solid #888888;
+    border-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.close-icon {
+    display: inline;
+    left: 0;
+    padding: 0 12px;
+}
+
+.head-txt {
+    display: inline;
+    padding: 0 0 0 24px;
+}
+
+.head-txt p {
     margin: 0;
 }
+.myModal-content {
+    width: 45% !important;
+    color: #ffffff;
+    padding: 0 24px 24px 24px;
+    margin: auto;
+    border: 1px solid #888;
+    background-color: #fff;
+}
 
+.header-content {
+    margin: 0 -24px;
+    font-size: 13px;
+}
+
+.yt-pre-black {
+    padding: 0 24px;
+    background-color: #444444;
+}
+
+.yt-wallet {
+    float: left;
+    width: 100px;
+    padding-right: 16px;
+}
+
+.yu-img {
+    width: 100%;
+    height: auto;
+}
+
+.yt-line-txt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ytp {
+    padding: 8px 0 16px 0;
+    display: inline;
+}
+
+.trial-line-txt {
+    display: inline;
+    align-self: center;
+}
+
+.charge-area {
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 24px 0;
+}
+
+.charge {
+    padding: 0 24px;
+    margin-bottom: 24px;
+}
+
+.ch-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.charge-txt {
+    display: inline;
+}
+
+.total {
+    margin: 3px;
+    margin-bottom: 0;
+    padding: 0 24px;
+}
+
+.total-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay-content {
+    color: #000;
+}
+
+.pay-txt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.g-pay {
+    display: inline;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 25px 0 10px;
+}
+
+.cre-txt {
+    display: inline;
+    padding: 16px 0;
+    font-size: 15px;
+}
+
+/* Credit card animation */
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.form__input {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+
+.form__label {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    padding: 0 .25rem;
+    background-color: #fff;
+    color: var(--input-color);
+    font-size: var(--normal-font-size);
+    transition: .3s;
+    font-weight: 55s0;
+}
+/*Input focus move up label*/
+
+.form__input:focus+.form__label {
+    top: -.5rem;
+    left: .8rem;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+}
+/*Input focus sticky top label*/
+
+.form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
+    top: -.5rem;
+    left: .8rem;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+}
+/*Input focus*/
+
+.form__input:focus {
+    border: 1.5px solid var(--first-color);
+}
+
+/* Animation End */
+
+.permission-content {
+    font-size: 12px;
+    color: rgba(0,0,0,0.54);
+}
+
+.per-area {
+    margin: 8px 0;
+}
+
+.button-wrapper {
+    margin-top: 24px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.buy-btn {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 14px;
+}
 
 /* The Close Button */
 
 .myClose {
     color: #aaaaaa;
     float: left;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
 }
 
