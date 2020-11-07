@@ -290,10 +290,12 @@
                         <p>Complete your purchase</p>
                     </div>
                 </div>
+                <!-- End Modal Head -->
 
-                <!-- Modal content 1 -->
+                <!-- Modal content -->
                 <div class="myModal-content">
                     <div class="header-content">
+                        <!-- Header (Black area) -->
                         <div class="yt-pre-black">
                             <!-- yt-wallet img -->
                             <div class="yt-wallet">
@@ -353,9 +355,8 @@
                                 <div class="total">
                                     <div class="total-area">
 
-                                        <div
-                                            style="display: inline;;padding-right: 24px;text-align: right;width: 100%;">
-                                            <div style="color: rgba(0,0,0,0.54);">
+                                        <div style="display: inline;;padding-right: 24px;width: 100%;">
+                                            <div style="text-align: right;color: rgba(0,0,0,0.54);">
                                                 Total today
                                             </div>
                                         </div>
@@ -371,11 +372,11 @@
 
                             </div>
                         </div>
-
                     </div>
+                    <!-- End Header -->
 
                     <!-- hr -->
-                    <hr style="border-top-color: #e0e0e0;margin-top: -1px;">
+                    <hr style="border-top-color: #e0e0e0;margin-top: -1px;margin-bottom: 0;">
 
                     <!-- Pay -->
                     <div class="pay-content">
@@ -397,109 +398,125 @@
                                             Add credit or debit card
                                         </div>
                                     </div>
+
                                 </div>
 
                                 <!-- hr -->
-                                <hr style="border-top-color: #e0e0e0;margin-top: -1px;">
+                                <hr style="border-top-color: #e0e0e0;margin-top: -1px;margin-bottom: 0;">
 
-                                <div class="row">
-                                    <div class="col-1 text-center" style="font-size: 30px;">
+                                <div class="row mt-1">
+                                    <div class="col-1 text-center mt-2 form__selected_1" style="font-size: 25px;color: rgba(0, 0, 0, 0.54);">
                                         #
                                     </div>
-                                    <div class="col-11">
-                                        <div class="row">
+
+                                    <div class="col-11 form__select_1">
+                                        <div class="row mb-3 mt-2">
                                             <!-- Card num -->
-                                            <div class="col-6">
+                                            <div class="col-7">
                                                 <input class="form__input" autocomplete="off"
-                                                    type="text" placeholder=" " id="cardnum" >
+                                                    type="text" placeholder=" " 
+                                                    id="cardnum" >
                                                 <label for="" class="form__label">Card number</label>
                                             </div>
                                             <!-- MM/YY-->
-                                            <div class="col-1">
+                                            <div class="col-1" style="padding-left: 0.2rem;padding-right: 0.2rem;">
                                                 <div>
                                                     <input class="form__input" autocomplete="off"
                                                         type="text" placeholder=" " id="month">
-                                                    <label for="" class="form__label">MM</label>
+                                                    <label for="" class="form__label" style="left: 0;">MM</label>
                                                 </div>
                                             </div>
 
-                                            <span>/</span>
+                                            <span style="margin-top: 1rem;margin-left: 0.2rem;
+                                                margin-right: 0.2rem;font-size: 15px;">
+                                                /
+                                            </span>
 
-                                            <div class="col-1">
+                                            <div class="col-1" style="padding-left: 0.2rem;padding-right: 0.2rem;">
                                                 <div>
                                                     <input class="form__input" autocomplete="off"
                                                         type="text" placeholder=" " id="year">
-                                                    <label for="" class="form__label">YY</label>
+                                                    <label for="" class="form__label" style="left: 0;">YY</label>
                                                 </div>
                                             </div>
 
+                                            <div class="col-2">
+                                                <input class="form__input" autocomplete="off" type="text"
+                                                    placeholder=" " id="cvc">
+                                                <label for="" class="form__label">CVC</label>
+                                            </div>
+
                                         </div>
-                                        <div class="col-2">
-                                            <input class="form__input" autocomplete="off" type="text"
-                                                placeholder=" " id="cvc">
-                                            <label for="" class="form__label">CVC</label>
+                                        
+                                        <div class="row my-3">
+                                            <div class="col-11">
+                                                <input class="form__input" autocomplete="off" type="text"
+                                                    placeholder=" " id="cardname">
+                                                <label for="" class="form__label">Cardholder name</label>
+                                            </div>
                                         </div>
+
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <input class="form__input" autocomplete="off" type="text"
-                                                placeholder=" " id="cardname">
-                                            <label for="" class="form__label">Cardholder name</label>
-                                        </div>
+
+                                </div>
+
+                                <div class="row d-flex align-items-center my-3">
+                                    <div class="col-1 text-center mt-2 form__select_2">
+                                        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill"
+                                            fill="rgba(0, 0, 0, 0.54)" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="col-11">
+                                        <input class="form__input" autocomplete="off" type="text"
+                                            placeholder=" " id="address">
+                                        <label for="" class="form__label">Billing address</label>
                                     </div>
                                 </div>
+
+                            </section>
                         </div>
+                    </div>
+                    <!-- End Pay -->
 
-                        <div class="row d-flex align-items-center">
-                            <div class="col-1 text-center">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill"
-                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                </svg>
-                            </div>
-
-                            <div class="col-11">
-                                <input class="form__input" autocomplete="off" type="text"
-                                    placeholder=" " id="address">
-                                <label for="" class="form__label">Billing address</label>
-                            </div>
+                    <!-- permission -->
+                    <div class="permission-content">
+                        <div class="per-area">
+                            <strong>
+                                Billing starts on Dec 6, 2020, the end of your free trial, and will renew automatically
+                                every month.
+                            </strong>
+                            <br>
+                            Payments won’t be refunded for partial billing periods. Cancel anytime in YouTube settings.
+                            <a href="#">Learn more.</a>
                         </div>
+                        <div class="per-area">
+                            All price include applicable taxes. By continuing you verify that you are at least 18 years
+                            old and agree to
+                            <a href="#">these terms.</a>
+                        </div>
+                    </div>
 
-                        </section>
+                    <!-- Button -->
+                    <div class="button-wrapper">
+                        <div style="float: right;">
+                            <button id="myBtn" class="btn btn-primary px-4 buy-btn" style="background-color: #065fd4;" onclick="submit()">
+                                BUY
+                            </button>
+                        </div>
                     </div>
-                </div>
+                    <!-- End Permission -->
 
-                <!-- permission -->
-                <div class="permission-content">
-                    <div class="per-area">
-                        <strong>
-                            Billing starts on Dec 6, 2020, the end of your free trial, and will renew automatically
-                            every month.
-                        </strong>
-                        <br>
-                        Payments won’t be refunded for partial billing periods. Cancel anytime in YouTube settings.
-                        <a href="#">Learn more.</a>
-                    </div>
-                    <div class="per-area">
-                        All price include applicable taxes. By continuing you verify that you are at least 18 years
-                        old and agree to
-                        <a href="#">these terms.</a>
-                    </div>
                 </div>
-
-                <!-- Button -->
-                <div class="button-wrapper">
-                    <div style="float: right;">
-                        <button id="myBtn" class="btn btn-primary px-4 buy-btn" style="background-color: #065fd4;" onclick="submit()">
-                            BUY
-                        </button>
-                    </div>
-                </div>
+                <!-- End Modal Content -->
 
             </div>
         </div>
+        <!-- End Modal -->
+
     </div>
     </div>
 
