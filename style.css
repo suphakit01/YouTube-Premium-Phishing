@@ -126,6 +126,7 @@ a:hover {
 /* -------------------------------------------- Nav bar */
 
 .nav-bar {
+    z-index: 99;
     position: fixed;
     width: 100%;
     display: flex;
@@ -277,4 +278,77 @@ a:hover {
 
 .detail-content h6 {
     margin-top: 12px;
+}
+
+
+/* -------------------------------------------- Content 2 */
+
+.content-2 {
+    padding: 0 10vw;
+    height: 23.75em;
+}
+
+
+/* -------------------------------------------- Content 3 */
+
+.content-3 {
+    height: 34.375em;
+    width: 100%;
+}
+
+.content-3-bg {
+    background-image: url('img/ytr_lp2_story_music_neutral_ytp_on_android_device_desktop_2880x1620.jpg');
+    box-sizing: border-box;
+    min-height: 550px;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10vw;
+}
+
+
+/* -------------------------------------------- Content 4 */
+
+.content-4 {
+    height: 34.375em;
+    width: 100%;
+}
+
+.content-4-bg {
+    background-image: url('img/ytr_lp2_story_music_neutral_ytp_music_desktop_2880x1620.jpg');
+    box-sizing: border-box;
+    min-height: 550px;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10vw;
+    color: #fff;
+}
+
+
+/* -------------------------------------------- Content 5 */
+
+.content-5 {
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+/* Accordient */
+
+.accordion {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1em 0em;
+}
+
+.accordionTab {
+    font-size: 18px;
+}
+
+#accordionDetail1 {
+    display: none;
 }

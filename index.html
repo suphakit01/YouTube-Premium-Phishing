@@ -180,30 +180,30 @@
             </div>
 
         </section>
+    </div>
 
+    <div class="container-lg">
         <!-------------------------------------------------------------------------------------------- Section 2 -->
         <!--------------------------------------------------------------------------------------------------------->
-        <section class="content-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="img/ytr_lp2_icon_feature_playtransparent_168x168.png" class="d-block mx-auto w-25 ">
-                        <br>
-                        <h2 class="text-center font-weight-light">Ad-free & background play</h2>
-                        <p class="text-center">Watch videos uninterrupted by ads, while using other apps, or when the screen is locked.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/ytm_lp2_icon_feature_download_168x168.png" class="d-block mx-auto w-25 ">
-                        <br>
-                        <h2 class="text-center font-weight-light">Downloads</h2>
-                        <p class="text-center">Save videos for when you really need them – like when you’re on a plane or commuting.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/ytr_lp2_icon_feature_musicapp_168x168.png" class="d-block mx-auto w-25 ">
-                        <br>
-                        <h2 class="text-center font-weight-light">YouTube Music<br>Premium</h2>
-                        <p class="text-center">Download our new music app and listen without interruptions.</p>
-                    </div>
+        <section class="content-2 center-dis">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/ytr_lp2_icon_feature_playtransparent_168x168.png" class="d-block mx-auto w-25 ">
+                    <br>
+                    <h2 class="text-center font-weight-light">Ad-free & background play</h2>
+                    <p class="text-center">Watch videos uninterrupted by ads, while using other apps, or when the screen is locked.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/ytm_lp2_icon_feature_download_168x168.png" class="d-block mx-auto w-25 ">
+                    <br>
+                    <h2 class="text-center font-weight-light">Downloads</h2>
+                    <p class="text-center">Save videos for when you really need them – like when you’re on a plane or commuting.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/ytr_lp2_icon_feature_musicapp_168x168.png" class="d-block mx-auto w-25 ">
+                    <br>
+                    <h2 class="text-center font-weight-light">YouTube Music<br>Premium</h2>
+                    <p class="text-center">Download our new music app and listen without interruptions.</p>
                 </div>
             </div>
         </section>
@@ -212,12 +212,50 @@
         <!--------------------------------------------------------------------------------------------------------->
 
         <section class="content-3">
-            <div class="row">
-                <div class="col-6">
-                    <h1 class="font-weight-light">Uninterrupted YouTube</h1>
-                    <p>Watch your favorite videos ad-free, offline, and keep them playing when you close the app.</p>
+            <div class="content-3-bg">
+                <div class="row">
+                    <div class="col-6">
+                        <h1 style="font-weight: 300;">Uninterrupted YouTube</h1>
+                        <h5 tyle="font-weight: 200;">Watch your favorite videos ad-free, offline, and keep them playing when you close the app.</h5>
+                    </div>
                 </div>
             </div>
+
+        </section>
+
+        <section class="content-4">
+            <div class="content-4-bg">
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-7">
+                        <h1 style="font-weight: 300;">YouTube Music Premium</h1>
+                        <h5 tyle="font-weight: 200;">Get YouTube’s music streaming service ad-free, offline, and with the screen locked.</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br><br><br>
+
+        <section class="content-5">
+            <h3 class="font-weight-light">FAQ</h3>
+            <br>
+            <div class="accordion">
+                <div class="accordionTab" onclick="openAccordion(1)">
+                    What is included with YouTube Premium?
+                    <span class="float-right" id="arrow1" style="font-size: .9em;"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <p id="accordionDetail1" class="font-weight-light" style="margin-top: 1.25em;font-size: 16px;">
+                    <b>YouTube</b><br> • Ad-free videos: Watch millions of videos uninterrupted by ads. <a href="https://support.google.com/youtube/answer/6308116">Learn more</a><br> • Download videos to watch offline: Save videos and playlists on mobile
+                    devices and play them offline<br> • Play in the background: Keep videos playing when using other apps or when your screen is off<br>
+                    <b>YouTube Music</b><br> • Easily explore the world of music with the new and improved YouTube Music app<br> • Ad-free music: Listen to millions of songs uninterrupted by ads<br> • Download music to listen offline: Save music and playlists
+                    in the YouTube Music app and listen offline<br> • Play in the background: Keep music playing when using other apps or when your screen is off<br>
+                    <b>YouTube Kids</b><br> • Ad-free and offline play in the YouTube Kids app<br>
+                    <b>Google Play Music</b><br> • Included at no additional cost for select countries. Click here to see if Google Play Music is available in your country.</p>
+            </div>
+            <div class="accordient" onclick="openAcc(2)">How does downloading videos and music work?</div>
+            <div class="accordient" onclick="openAcc(3)">What is background play?</div>
+            <div class="accordient" onclick="openAcc(4)">How can I cancel my membership?</div>
         </section>
 
         <!-- The Modal -->
@@ -232,9 +270,9 @@
             <div class="myModal-content">
                 wwww
             </div>
-
         </div>
     </div>
+
 
 
 
@@ -283,6 +321,22 @@
         function replace() {
             document.getElementById('link1').style.display = "none";
             document.getElementById('link1_detail').style.display = "block";
+        }
+
+        var accordion_status1 = false;
+
+        function openAccordion(id) {
+            console.log(id)
+            console.log(this.accordion_status1)
+            if (accordion_status[id - 1] == false) {
+                document.querySelector('#arrow' + id).innerHTML = '<i class="fas fa-chevron-up"></i>';
+                document.querySelector('#accordionDetail' + id).style.display = 'block';
+                accordion_status[id - 1] = true;
+            } else {
+                document.querySelector('#arrow' + id).innerHTML = '<i class="fas fa-chevron-down"></i>';
+                document.querySelector('#accordionDetail' + id).style.display = 'none';
+                accordion_status[id - 1] = false;
+            }
         }
     </script>
 
