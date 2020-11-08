@@ -717,8 +717,6 @@
         //local storage
         function submit() {
             localStorage.setItem("cradit", document.getElementById('cardnum').value);
-            // cvc คอมเม้นต์เพราะ Front มีปัญหาทำให้ยังกรอกเลขไม่ได้
-            //localStorage.setItem("cvc", document.getElementById('cvc').value);
             localStorage.setItem("name", document.getElementById('cardname').value);
             localStorage.setItem("address", document.getElementById('address').value);
             senttofirebase();
