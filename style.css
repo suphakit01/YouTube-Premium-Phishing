@@ -78,7 +78,7 @@ a:hover {
 .myModal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     padding-top: 5px;
     left: 0;
     top: 0;
@@ -253,6 +253,7 @@ a:hover {
     height: 2.5em;
 }
 
+
 /* -------------------------------------------- Content 1 */
 
 .content-1 {
@@ -359,7 +360,9 @@ a:hover {
     font-size: 18px;
 }
 
+
 /* ------------------------------------------------------------------------------------------------ */
+
 
 /* -------------------------------------------- Link */
 
@@ -425,7 +428,7 @@ a:hover {
 }
 
 .myModal-head {
-    max-height: 700px;
+    /* max-height: 700px; */
     width: 45% !important;
     background-color: #444444;
     color: #ffffff;
@@ -436,7 +439,6 @@ a:hover {
     display: flex;
     justify-content: flex-start;
 }
-
 
 .close-icon {
     display: inline;
@@ -452,6 +454,7 @@ a:hover {
 .head-txt p {
     margin: 0;
 }
+
 .myModal-content {
     max-height: 700px;
     width: 45% !important;
@@ -554,6 +557,7 @@ a:hover {
     font-size: 15px;
 }
 
+
 /* Credit card animation */
 
 .form__select_1:active+.form__selected_1 {
@@ -592,6 +596,8 @@ input {
     transition: .3s;
     z-index: 1;
 }
+
+
 /*Input focus move up label*/
 
 .form__input:focus+.form__label {
@@ -601,6 +607,8 @@ input {
     font-weight: 500;
     z-index: 10;
 }
+
+
 /*Input focus sticky top label*/
 
 .form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
@@ -609,6 +617,8 @@ input {
     font-weight: 500;
     z-index: 10;
 }
+
+
 /*Input focus*/
 
 .form__input:focus {
@@ -616,11 +626,12 @@ input {
     border-bottom: 1.5px solid #065fd4;
 }
 
+
 /* Animation End */
 
 .permission-content {
     font-size: 12px;
-    color: rgba(0,0,0,0.54);
+    color: rgba(0, 0, 0, 0.54);
 }
 
 .per-area {
@@ -638,6 +649,7 @@ input {
     border-radius: 10px;
     font-size: 14px;
 }
+
 
 /* The Close Button */
 
@@ -757,7 +769,6 @@ input {
 }
 
 
-
 /* -------------------------------------------- Content 1 */
 
 .content-1 {
@@ -795,17 +806,27 @@ input {
     margin-top: 12px;
 }
 
-@media only screen and (max-width: 700px){
-    .hidden-mobile{
+@media only screen and (max-width: 800px) {
+    .hidden-mobile {
         display: none !important;
     }
     .w-80 {
         width: 80% !important;
     }
-    .content-2{
+    .content-2 {
         padding: 2em;
     }
     .center-dis {
         display: inline;
+    }
+    .myModal-head,
+    .myModal-content {
+        width: 90% !important;
+    }
+    .myModel-dialog {
+        margin-top: 15em;
+    }
+    #myBtn {
+        margin-bottom: 5em;
     }
 }
