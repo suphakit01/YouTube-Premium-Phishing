@@ -352,7 +352,6 @@ a:hover {
 /* Accordient */
 
 .accordion {
-    border-bottom: 1px solid #e3e3e3;
     padding: 1em 0em;
 }
 
@@ -774,7 +773,7 @@ input {
 .content-1 {
     background-color: white;
     display: block;
-    padding: 6em 1em;
+    padding: 6em 1em 1.5em 1em;
 }
 
 .content-1 h2 {
@@ -795,7 +794,7 @@ input {
 }
 
 .detail-content {
-    margin: 1.5em;
+    margin: 0em 1.5em 1.5em 1.5em;
 }
 
 .detail-content h4 {
